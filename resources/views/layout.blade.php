@@ -12,6 +12,7 @@
     <!-- Favicons -->
     <link href="/img/favicon.png" rel="icon">
     <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -24,7 +25,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Vendor CSS Files -->
 {{--    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">--}}
-{{--    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">--}}
+{{--    <link href="/css/icofont/icofont.min.css" rel="stylesheet">--}}
 {{--    <link href="assets/vendor/aos/aos.css" rel="stylesheet">--}}
 {{--    <link href="assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">--}}
 {{--    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">--}}
@@ -41,32 +42,50 @@
 <body>
 
 <!-- ======= Navbar ======= -->
+
+    <div class="collapse navbar-collapse custom-navmenu" id="main-search">
+        <div class="container py-2 py-md-5">
+            <div class="row align-items-start">
+                <div class="col-md-2">
+                    <form method="post" action="ricerca.php">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="ricerca" name="ricerca">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="submit" name="invia_ricerca">
+                                    <i class="material-icons">Search</i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 {{--https://ekinakis.com/wp-content/uploads/2019/05/NEW.jpg--}}
 <section  style="background: url(https://ekinakis.com/wp-content/uploads/2019/05/NEW.jpg) no-repeat center -50px fixed;
                    background-size: cover;
                    height: 750px;
-                   overflow: hidden; ">
-        <nav id="main-nav" class="navbar navbar-light fixed-top custom-navbar">
+                   overflow: hidden;">
+    <nav class="navbar  custom-navbar">
         <div class="container">
-            <div class="col-md-12 col-lg-3  mb-lg-0">
-                <p><a class="navbar-brand  align-top" href="index.html">MyPortfolio.</a></p>
-                <p>Freelance Creativity</p>
-            </div>
-
-            <div class="col-md-12 col-lg-5 mb-lg-0 text-left text-lg-left">
-                <div id="main-menu" class="main-menu">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">Sara Siami</a>
-                    <a href="works.html">Works</a>
-                </div>
+            <div class="col-md-12 col-lg-8  mb-lg-0 main-menu">
+                <a class="navbar-brand" href="index.html">MyPortfolio.</a>
+{{--                <p>Freelance Creativity</p>--}}
+                <a href="index.html">HOME</a>
+                <a href="about.html">SARA SIAMI</a>
+                <a href="works.html">WORK</a>
             </div>
             <div class="col-md-12 col-lg-4 text-left text-lg-right">
-                Login
+                <ul class="list-inline icon-color">
+                    <li class="list-inline-item"><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+                    <li class="list-inline-item"><i  class="fa" >&#xf2c0;</i></li>
+                    <a href="#" class="search" data-toggle="collapse" data-target="#main-search">
+                        <li class="list-inline-item"><i class="fa fa-search" aria-hidden="true"></i></li>
+                    </a>
+                </ul>
             </div>
-
-            <!--      <a href="#" class="burger" data-toggle="collapse" data-target="#main-navbar">-->
-            <!--        <span></span>-->
-            <!--      </a>-->
         </div>
     </nav>
 </section>
