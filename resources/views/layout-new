@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,13 +28,13 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Vendor CSS Files -->
-{{--    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">--}}
-{{--    <link href="/css/icofont/icofont.min.css" rel="stylesheet">--}}
-{{--    <link href="assets/vendor/aos/aos.css" rel="stylesheet">--}}
-{{--    <link href="assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">--}}
-{{--    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">--}}
+    {{--    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">--}}
+    {{--    <link href="/css/icofont/icofont.min.css" rel="stylesheet">--}}
+    {{--    <link href="assets/vendor/aos/aos.css" rel="stylesheet">--}}
+    {{--    <link href="assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">--}}
+    {{--    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">--}}
 
-<!-- Styles -->
+    <!-- Styles -->
     <!-- Template Main CSS File -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
@@ -73,7 +75,7 @@
             <div class="site-branding col-lg-2">
                 <a href="#page-top">MyPortfolio.</a>
             </div>
-            <div class="site-tools col-lg-3">
+            <div class="site-tools col-lg-4">
                 <ul>
                     <li class="wish-list-button">
                         <a><i class="icofont-shopping-cart"></i></a>
@@ -83,39 +85,27 @@
                     </li>
                     <li>
                         <a href="#" class="search" data-toggle="collapse" data-target="#main-search">
-                            <i class="icofont-search"></i>
+                            <i class="fa fa-search" aria-hidden="true"></i>
                         </a>
                     </li>
                 </ul>
             </div>
             <nav  class="main-navigation default-navigation align_left" role="navigation">
-                <div class="col-lg-7">
-                    <ul class="menu-main-navigation">
-                        <li class="menu-item">
-                            <a>SHOP</a>
-                        </li>
-                        <li class="menu-item">
-                            <a>SARA SIAMI</a>
-                        </li>
-                        <li class="menu-item">
-                            <a>WORK</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="menu-main-navigation">
+                    <li class="menu-item">
+                        <a>SHOP</a>
+                    </li>
+                    <li class="menu-item">
+                        <a>SARA SIAMI</a>
+                    </li>
+                    <li class="menu-item">
+                        <a>WORK</a>
+                    </li>
+                </ul>
             </nav>
         </div>
     </div>
-    <div class="row content-new-element">
-        <div class="test">
-            <div class="col-md-12 col-lg-12 content-element">new </div>
-            <div class="col-md-12 col-lg-12 mini-shop-header"> <strong>Explore the latest works</strong></div>
-            <div class="col-md-12 col-lg-12 pt-3">
-                <button type="button" class="btn btn-outline-light mini-shop-button" style="font-size:10px; font-weight: bold;">VIEW COLLECTION</button>
-            </div>
-        </div>
-    </div>
 </header>
-
 <main id="main">
     <!-- ======= Works Section ======= -->
     <section class="section pt-5 site-portfolio">
@@ -232,4 +222,6 @@
 </body>
 
 </html>
+
+
 

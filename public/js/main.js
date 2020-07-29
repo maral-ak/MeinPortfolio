@@ -5,10 +5,10 @@
   var search = function() {
     $('.search').click(function(e) {
       $(window).scrollTop(0);
-      if (!$('.search').hasClass('active'))
-        $('.search').addClass('active');
+      if (!$('nav.search').hasClass('active'))
+        $('nav.search').addClass('active');
       else
-        $('.search').removeClass('active');
+        $('nav.search').removeClass('active');
     });
   }
   search();
@@ -43,19 +43,37 @@
     siteIstotope();
   });
 
-   $(document).ready(function() {
-       var scroll_pos = 0;
-       $(document).scroll(function () {
-           scroll_pos = $(this).scrollTop();
-           if (scroll_pos > 0) {
-               $('nav').removeClass('static-top').addClass('fixed-top').addClass('bg-color');
-           } else {
-               $('nav').removeClass('fixed-top').addClass('static-top').removeClass('bg-color');
-           }
-       });
+  $(document).ready(function() {
+      var scroll_pos = 0;
+      $(document).scroll(function () {
+          scroll_pos = $(this).scrollTop();
+          if (scroll_pos > 0) {
+              $('.site-top-header').removeClass('static-top').addClass('fixed-top').addClass('bg-color');
+          } else {
+              $('.site-top-header').removeClass('fixed-top').addClass('static-top').removeClass('bg-color');
+          }
+      });
     });
+  //   $('body').scrollspy({
+  //       target: '#mainNav',
+  //       offset: 75
+  //   });
+  //
+  //   // Collapse Navbar
+  //   var navbarCollapse = function() {
+  //       if ($("#mainNav").offset().top > 100) {
+  //           $("#mainNav").addClass("navbar-scrolled");
+  //       } else {
+  //           $("#mainNav").removeClass("navbar-scrolled");
+  //       }
+  //   };
+  //   // Collapse now if page is not at top
+  //   navbarCollapse();
+  //   // Collapse the navbar when page is scrolled
+  //   $(window).scroll(navbarCollapse);
 
-  $(window).on('load', function() {
+
+    $(window).on('load', function() {
     AOS.init({
       easing: 'ease',
       duration: 1000,

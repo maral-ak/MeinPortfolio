@@ -13,7 +13,6 @@
     <link href="/img/favicon.png" rel="icon">
     <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="/css/icofont/icofont.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -26,13 +25,13 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Vendor CSS Files -->
-{{--    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">--}}
-{{--    <link href="/css/icofont/icofont.min.css" rel="stylesheet">--}}
-{{--    <link href="assets/vendor/aos/aos.css" rel="stylesheet">--}}
-{{--    <link href="assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">--}}
-{{--    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">--}}
+    {{--    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">--}}
+    {{--    <link href="/css/icofont/icofont.min.css" rel="stylesheet">--}}
+    {{--    <link href="assets/vendor/aos/aos.css" rel="stylesheet">--}}
+    {{--    <link href="assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">--}}
+    {{--    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">--}}
 
-<!-- Styles -->
+    <!-- Styles -->
     <!-- Template Main CSS File -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
@@ -42,7 +41,6 @@
 </head>
 
 <body id="page-top">
-
 <!-- ======= Search Toggle ======= -->
 <div class="collapse navbar-collapse custom-navmenu" id="main-search">
     <div class="container py-2 py-md-5">
@@ -64,57 +62,42 @@
     </div>
 </div>
 <!-- ======= Navbar ======= -->
-<header class="masthead" style="background: url(https://ekinakis.com/wp-content/uploads/2019/05/NEW.jpg) no-repeat center -50px fixed;
+<section  style="background: url(https://ekinakis.com/wp-content/uploads/2019/05/NEW.jpg) no-repeat center -50px fixed;
                    background-size: cover;
                    height: 750px;
                    overflow: hidden;">
-    <div class="site-top-header">
-        <div class="site-header col-lg-12">
-            <div class="site-branding col-lg-2">
-                <a href="#page-top">MyPortfolio.</a>
+    <nav class="navbar  custom-navbar">
+        {{--        <div class="container">--}}
+            <div class="col-md-12 col-lg-8  mb-lg-0 main-menu">
+                <a class="navbar-brand" href="index.html">MyPortfolio.</a>
+                {{--                <p>Freelance Creativity</p>--}}
+                <a href="index.html">SHOP</a>
+                <a href="about.html">SARA SIAMI</a>
+                <a href="works.html">WORK</a>
             </div>
-            <div class="site-tools col-lg-3">
-                <ul>
-                    <li class="wish-list-button">
-                        <a><i class="icofont-shopping-cart"></i></a>
-                    </li>
-                    <li class="shopping-bag-button">
-                        <a><i class="icofont-user-alt-7"></i></a>
-                    </li>
-                    <li>
-                        <a href="#" class="search" data-toggle="collapse" data-target="#main-search">
-                            <i class="icofont-search"></i>
-                        </a>
-                    </li>
+            <div class="col-md-12 col-lg-4 text-left text-lg-right">
+                <ul class="list-inline icon-color">
+                    <li class="list-inline-item"><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+                    <li class="list-inline-item"><i  class="fa" >&#xf2c0;</i></li>
+                    <a href="#" class="search" data-toggle="collapse" data-target="#main-search">
+                        <li class="list-inline-item"><i class="fa fa-search" aria-hidden="true"></i></li>
+                    </a>
                 </ul>
             </div>
-            <nav  class="main-navigation default-navigation align_left" role="navigation">
-                <div class="col-lg-7">
-                    <ul class="menu-main-navigation">
-                        <li class="menu-item">
-                            <a>SHOP</a>
-                        </li>
-                        <li class="menu-item">
-                            <a>SARA SIAMI</a>
-                        </li>
-                        <li class="menu-item">
-                            <a>WORK</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
+            {{--        </div>--}}
+    </nav>
     <div class="row content-new-element">
-        <div class="test">
+        {{--        <div class="test">--}}
             <div class="col-md-12 col-lg-12 content-element">new </div>
             <div class="col-md-12 col-lg-12 mini-shop-header"> <strong>Explore the latest works</strong></div>
             <div class="col-md-12 col-lg-12 pt-3">
-                <button type="button" class="btn btn-outline-light mini-shop-button" style="font-size:10px; font-weight: bold;">VIEW COLLECTION</button>
+                <button type="button" class="btn btn-outline-light mini-shop-button">VIEW COLLECTION</button>
             </div>
-        </div>
+
+            {{--        </div>--}}
+
     </div>
-</header>
+</section>
 
 <main id="main">
     <!-- ======= Works Section ======= -->
@@ -219,10 +202,6 @@
 </footer>
 <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 <!-- Template Main JS File -->
-{{----}}
-
-
-{{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>--}}
 
 
 
@@ -232,4 +211,5 @@
 </body>
 
 </html>
+
 
