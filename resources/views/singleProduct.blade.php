@@ -9,6 +9,9 @@
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
 
+    <script type="text/javascript" src="/fresco/dist/js/fresco.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/fresco/dist/css/fresco.css"/>
+
     <!-- Favicons -->
     <link href="/img/favicon.png" rel="icon">
     <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -64,10 +67,6 @@
     </div>
 </div>
 <!-- ======= Navbar ======= -->
-<header class="masthead" style="background: url(https://ekinakis.com/wp-content/uploads/2019/05/NEW.jpg) no-repeat center -50px fixed;
-                   background-size: cover;
-                   height: 750px;
-                   overflow: hidden;">
     <div class="site-top-header">
         <div class="site-header col-lg-12">
             <div class="site-branding col-lg-2">
@@ -105,59 +104,60 @@
             </nav>
         </div>
     </div>
-    
-    <div class="row content-new-element">
-        <div class="test">
-            <div class="col-md-12 col-lg-12 content-element">new </div>
-            <div class="col-md-12 col-lg-12 mini-shop-header"> <strong>Explore the latest works</strong></div>
-            <div class="col-md-12 col-lg-12 pt-3">
-                <button type="button" class="btn btn-outline-light mini-shop-button" style="font-size:10px; font-weight: bold;">VIEW COLLECTION</button>
-            </div>
-        </div>
-    </div>
-</header>
 
 <main id="main">
     <!-- ======= Works Section ======= -->
-    <section class="section pt-5 site-portfolio">
-        <div class="container">
-            <div class="row mb-5 text-center">
-                <div class="col-md-12 col-lg-12 mb-4 mb-lg-0" style="height: 100px " data-aos="fade-up">
-                    <h1>SHOP</h1>
-                </div>
+<section class="section site-portfolio pt-5" >
+    <div class="container">
+        <div id="portfolio-grid" class="row product-content" data-aos="fade-up" data-aos-delay="200">
+            @foreach($product->images as $img)
+            <div class="item col-sm-6 col-md-12 col-lg-8 mb-4">
+                <a href="/img/{{$img->img_name}}"  class="fresco"  data-fresco-group-options="thumbnails: 'vertical'">
+                    <img class="img-fluid"  src="/img/{{$img->img_name}}">
+                </a>
             </div>
-            <div class="row mb-5 text-center">
-                <div class="col-md-12 col-lg-12 " data-aos="fade-up" data-aos-delay="100">
-                    <div id="filters" class="filters">
-                        <a href="#" data-filter="*" class="active">All</a>
-                        <a href="#" data-filter=".web">New Arrivals</a>
-                        <a href="#" data-filter=".collage">Collage</a>
-                        <a href="#" data-filter=".ecoline">Ecoline</a>
-                        <a href="#" data-filter=".sketches">Sketches</a>
-                        <a href="#" data-filter=".watercolor">WaterColor</a>
-                        <a href="#" data-filter=".pen">Pen</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
-            @foreach($products as $product)
-                <div class="item {{$product->category->cat_name}} col-sm-6 col-md-4 col-lg-4 mb-4">
-                
-                    <a href="/products/{{$product->id}}" class="item-wrap fancybox">
-                        <div class="work-info">
-                            <h3>{{$product->title_pd}}</h3>
-                            <span>{{$product->category->cat_name}}</span> 
-                        </div>
-                        <img class="img-fluid" style="object-fit: none; width:450px;height:350px;"  src="/img/{{$product->images[0]->img_name}}">
-                       
-                    </a>
-                   
-                </div>
             @endforeach
+            <div class="product-info col-sm-6 col-md-12 col-lg-4 mb-4">
+                <hr class= "boldred">
+                <div class="product-title pt-2">
+                    <h1> {{$product->title_pd}} </h1>
+                </div>
+                <div class="product-description">
+                    <hr class= "boldred">
+                    <br>
+                    <span><h1> description </h1></span>
+                    <br>
+                    <p>{{$product->description_pd}}</p>
+                    <form class="cart" action="" method="post">
+				        <table class="variations" cellspacing="0">
+			                <tbody>
+								<tr>
+                                    <td class="label"><label for="pa_frame">Frame</label></td>
+                                    <td class="value woo-variation-items-wrapper">
+                                        <select id="pa_frame" class=" hide woo-variation-raw-select woo-variation-raw-type-button" style="display:none" name="attribute_pa_frame" data-attribute_name="attribute_pa_frame" data-show_option_none="yes">
+                                            <option value="">Choose an option</option>
+                                            <option value="no-frame" class="attached enabled">No Frame</option>
+                                            <option value="stretched-canvas" class="attached enabled">Stretched Canvas</option>
+                                        </select>
+                                        <ul class="variable-items-wrapper button-variable-wrapper" data-attribute_name="attribute_pa_frame">
+                                            <li data-wvstooltip="No Frame" class="variable-item button-variable-item button-variable-item-no-frame" title="No Frame" data-value="no-frame">
+                                                <span class="variable-item-span variable-item-span-button">No Frame</span>
+                                            </li>
+                                            <li data-wvstooltip="Stretched Canvas" class="variable-item button-variable-item button-variable-item-stretched-canvas" title="Stretched Canvas" data-value="stretched-canvas">
+                                                <span class="variable-item-span variable-item-span-button">Stretched Canvas</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>       
+                </div>
+                   
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <!-- End  Works Section -->
 </main>
 <!-- End #main -->

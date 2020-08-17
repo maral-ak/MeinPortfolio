@@ -115,14 +115,120 @@ nav{
     font-weight: bold;
     text-transform: uppercase;
 }
-
-
-
-
-
 body {
-    font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   /*color: #0d1e2d;*/
+}
+
+/*Single Work*/
+row .product-content{
+  clear: both;
+  display: table;
+}
+.product-info{
+  position: absolute;
+  top: 0;
+  left: 78%;
+  padding: 0;
+} 
+hr.boldred {
+  clear: both;
+  max-width: 75rem;
+  height: 0;
+  margin: 1.25rem auto;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid #93474d !important;
+  border-left: 0;
+}
+
+.product-title h1, .product-description h1{
+  padding-top:5px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  line-height: 1.13em;
+  color: #545454;
+  text-align: left;
+  margin-bottom: 21px;
+  font-size: x-large !important;
+  text-transform: uppercase;
+}
+
+/* Form*/
+form .cart{
+  display: table;
+  margin-bottom: 30px;
+  color: #545454;
+  border: 0;
+  width: 100%;
+}
+form.cart .variations td.label {
+  padding-right: 1em;
+}
+table {
+  table-layout: auto;
+}
+table tr {
+  text-align: left;
+  border-collapse: collapse;
+}
+form.cart .variations label {
+  font-weight: BOLD;
+  color: #5c4848;
+  font-size: x-large;
+  text-transform: uppercase;
+
+}
+
+.variable-items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul, ul li ol, ul, ol, dl {
+  font-size: 16px;
+}
+.variable-items-wrapper [data-wvstooltip]::after {
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid rgba(51,51,51,.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+.variable-items-wrapper [data-wvstooltip]::after, .variable-items-wrapper [data-wvstooltip]::before {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  box-sizing: inherit;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  z-index: 999;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.variable-items-wrapper [data-wvstooltip]::before {
+  margin-bottom: 5px;
+  margin-left: -50px;
+  padding: 7px;
+  min-width: 100px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: rgba(51,51,51,.9);
+  color: #fff;
+  content: attr(data-wvstooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.variable-item-span {
+  padding: 4px 5px 0px 0px !important;
 }
 
 a {
@@ -517,6 +623,8 @@ i{
     padding-left: 0;
   }
 }
+
+
 
 /*.custom-navbar .navbar-brand {*/
 /*  font-size: 1.7rem;*/
