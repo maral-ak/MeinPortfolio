@@ -9,7 +9,9 @@ class ProductController extends Controller
 {
     public function showSingleProduct(Product $product)
     {
-      //show single resource
+     //show single resource
      return view('singleProduct', ['product' => $product]);
     }
+
+    
 }

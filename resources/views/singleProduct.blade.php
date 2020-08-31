@@ -128,30 +128,29 @@
                     <span><h1> description </h1></span>
                     <br>
                     <p>{{$product->description_pd}}</p>
-                    <form class="cart" action="" method="post">
-				        <table class="variations" cellspacing="0">
-			                <tbody>
-								<tr>
-                                    <td class="label"><label for="pa_frame">Frame</label></td>
-                                    <td class="value woo-variation-items-wrapper">
-                                        <select id="pa_frame" class=" hide woo-variation-raw-select woo-variation-raw-type-button" style="display:none" name="attribute_pa_frame" data-attribute_name="attribute_pa_frame" data-show_option_none="yes">
-                                            <option value="">Choose an option</option>
-                                            <option value="no-frame" class="attached enabled">No Frame</option>
-                                            <option value="stretched-canvas" class="attached enabled">Stretched Canvas</option>
-                                        </select>
-                                        <ul class="variable-items-wrapper button-variable-wrapper" data-attribute_name="attribute_pa_frame">
-                                            <li data-wvstooltip="No Frame" class="variable-item button-variable-item button-variable-item-no-frame" title="No Frame" data-value="no-frame">
-                                                <span class="variable-item-span variable-item-span-button">No Frame</span>
-                                            </li>
-                                            <li data-wvstooltip="Stretched Canvas" class="variable-item button-variable-item button-variable-item-stretched-canvas" title="Stretched Canvas" data-value="stretched-canvas">
-                                                <span class="variable-item-span variable-item-span-button">Stretched Canvas</span>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </form>       
+                    <br>
+                    <span><h1> frame </h1></span>
+                    <br>
+                    <p>{{$product->frame_pd}}</p>
+                    <br>
+                    <span><h1> material </h1></span>
+                    <br>
+                    <p>{{$product->material_pd}}</p>
+                    <br>
+                    <span><h1> size </h1></span>
+                    <br>
+                    <p>
+                    @foreach($product->dimensiones as $dimensione)
+                        {{ $dimensione->size }}
+                    @endforeach
+                    </p>
+                    <br>
+                    <span><h1> Price </h1></span>
+                    <br>
+                    <p>{{$product->price}} €</p>
+                    <br>
+                    <button type="submit" class="single_add_to_cart_button">Add to cart</button>
+                     
                 </div>
                    
             </div>

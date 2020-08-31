@@ -155,31 +155,6 @@ hr.boldred {
 }
 
 /* Form*/
-form .cart{
-  display: table;
-  margin-bottom: 30px;
-  color: #545454;
-  border: 0;
-  width: 100%;
-}
-form.cart .variations td.label {
-  padding-right: 1em;
-}
-table {
-  table-layout: auto;
-}
-table tr {
-  text-align: left;
-  border-collapse: collapse;
-}
-form.cart .variations label {
-  font-weight: BOLD;
-  color: #5c4848;
-  font-size: x-large;
-  text-transform: uppercase;
-
-}
-
 .variable-items-wrapper {
   display: flex;
   flex-wrap: wrap;
